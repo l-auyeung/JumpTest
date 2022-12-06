@@ -6,24 +6,20 @@ class Player
 private:
     Vector2f m_Position;
     Sprite m_Sprite;
-    //texture soon
     Texture m_Texture;
-    bool m_LeftPressed;
-    bool m_RightPressed;
-    float m_Speed;
+    float dy;
+
 
 public:
-    Player(float startX, float startY);
+    Player();
     FloatRect getPosition();
     Vector2f getCenter();
     Sprite getSprite();
     void moveLeft();
     void moveRight();
-    void stopLeft();
-    void stopRight();
-    void getVelocity();
-    void bouncePlat();
     void update(Time dt);
+    float getDy();
+    void setPosition(float x, float y);
 
 
 };
